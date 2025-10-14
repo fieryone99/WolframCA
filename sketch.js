@@ -14,8 +14,14 @@ let rule = 82;
 
 let ruleByPower = [(rule & 0b10000000)/0b10000000, (rule & 0b01000000)/0b01000000, (rule & 0b00100000)/0b00100000, (rule & 0b00010000)/0b00010000, (rule & 0b00001000)/0b00001000, (rule & 0b00000100)/0b00000100, (rule & 0b00000010)/0b00000010, (rule & 0b00000001)/0b00000001];
 
+let actualWidth;
+let actualHeight;
+
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  density = pixelDensity();
+  actualWidth = windowWidth * density;
+  actualHeight = windowHeight * density;
+  createCanvas(actualWidth, actualHeight);
 
   grid = create2DArray(width, height);
 
