@@ -2,8 +2,8 @@ let grid;
 
 //true serpinskli
 //let rule = 182;
-//let rule = 90;
-let rule = 82;
+let rule = 90;
+//let rule = 82;
 
 //diagopnal serpinski
 //let rule = 60;
